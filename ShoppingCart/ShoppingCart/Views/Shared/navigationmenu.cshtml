@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "navigationmenu";
+    Layout="~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<table>
+    <tr>
+        <td style="vertical-align:top;">
+            <table id="navTable" border="1" style="border-collapse:collapse">
+                <tr>
+                    <td>@Html.ActionLink("View Products", "ViewProducts", "Products")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Electronic & Gadgets", "ViewProductsElectronics", "Products")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Kitchen Electrics", "ViewProductsKitchen", "Products")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Luggage", "ViewProductsLuggage", "Products")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Add Products", "AddProducts", "Products")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Contact us", "ContactUS", "Home")</td>
+
+                </tr>
+               
+            </table>
+        </td>
+        <td style="width:90%;vertical-align:top;padding-left:100px;padding-top:20px">
+            @RenderBody()
+        </td>
+    </tr>
+</table>

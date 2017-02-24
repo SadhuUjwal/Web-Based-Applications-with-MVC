@@ -1,0 +1,75 @@
+﻿@model ShoppingCart.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>New Customer Registration</h2>
+@using (Html.BeginForm())
+{
+    <table border="1">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.Customername)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customername, new { autocomplete="off"})
+            </td>
+            <td>@Html.ValidationMessageFor(m => m.Customername)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.username)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.username, new { autocomplete = "off" })
+            </td>
+            <td>@Html.ValidationMessageFor(m => m.username)</td>
+        </tr>
+        
+         <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.password)
+            </td>
+            <td>
+                @Html.PasswordFor(m => m.password, new { autocomplete = "off" })
+            </td>
+             <td>@Html.ValidationMessageFor(m => m.password)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.Email)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Email, new { autocomplete = "off" })
+            </td>
+           <td>@Html.ValidationMessageFor(m => m.Email)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.contact)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.contact, new { autocomplete = "off" })
+            </td>
+            <td>@Html.ValidationMessageFor(m => m.contact)</td>
+        </tr>
+       
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.Cardno)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Cardno, new { autocomplete = "off" })
+            </td>
+            <td>@Html.ValidationMessageFor(m => m.Cardno)</td>
+        </tr>
+       
+        <tr>
+            <td>
+                <input type="submit" value="Register" name="btnregister" />
+            </td>
+        </tr>
+    </table>
+  
+}

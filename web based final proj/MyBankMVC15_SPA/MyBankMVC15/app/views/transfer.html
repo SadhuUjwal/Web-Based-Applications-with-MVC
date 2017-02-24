@@ -1,0 +1,30 @@
+﻿
+<h2>Transfer</h2>
+<div ng-init="GetAccountInfo()">
+    <div class="alert alert-danger" ng-show="Message">{{Message}}</div>
+    <div class="form-horizontal" ng-hide="Message">
+        <div class="form-group">
+            <label class="control-label">LoggedIn User :</label>
+            {{Account.Username}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Account no :</label>
+            {{Account.Acnn}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Checking ammount :</label>
+            {{Account.ChkBal}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Saving amount :</label>
+            {{Account.SavBal}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Enter the ammount to be transfered :</label>
+            <input type="text" ng-model="Account.TransAmt" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Transfer" class="btn btn-danger" ng-click="Transfer()" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model ShoppingCart.Models.Products
+
+@{
+    ViewBag.Title = "AddProducts";
+}
+
+<h2>AddProducts</h2>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.ProductId)
+            </td>
+            <td>@Html.TextBoxFor(m => m.ProductId)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.CatID)
+            </td>
+            <td>@Html.TextBoxFor(m => m.CatID)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.ProductSDesc)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ProductSDesc)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(m => m.ProductLDesc)
+        </td>
+        <td>@Html.TextBoxFor(m => m.ProductLDesc)</td>
+    </tr>
+    <tr>
+
+        <td>
+            @Html.DisplayNameFor(m => m.price)
+        </td>
+        <td>@Html.TextBoxFor(m => m.price)</td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(m => m.Instock)
+        </td>
+        <td>@Html.TextBoxFor(m => m.Instock)</td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(m => m.Inventory)
+        </td>
+        <td>@Html.TextBoxFor(m => m.Inventory)</td>
+    </tr>
+
+</table>
+    <input id="btnLogin" type="submit" value="Login" />
+}

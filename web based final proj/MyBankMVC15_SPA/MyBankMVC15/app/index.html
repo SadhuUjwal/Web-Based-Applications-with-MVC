@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="scripts/libs/angular.min.js"></script>
+    <script src="scripts/libs/angular-route.min.js"></script>
+    <script src="scripts/libs/angular-resource.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/service.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+</head>
+<body ng-app="app">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/home" class="navbar-brand">MyBank SPA Application</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" ng-controller="mainController">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/news">News</a></li>
+                    <li><a href="#/transfer">Transfer ChkToSav</a></li>
+                    <li><a href="#/transaction">Transaction History</a></li>
+                    <li><a href="#/login" ng-hide="authenticated">Login</a></li>
+                    <li><a href="#/logoff" ng-show="authenticated">Log Off</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content" ng-view>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+</body>
+</html>

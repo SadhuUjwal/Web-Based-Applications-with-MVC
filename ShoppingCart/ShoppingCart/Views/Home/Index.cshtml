@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Quick Cart</title>
+</head>
+<body style="background-color:azure">
+    <div>
+        <table border="1">
+            <tr>
+                <td>
+                    <h2> @Html.ActionLink("Home", "Index", "Home")</h2>
+                    <h2>@Html.ActionLink("Register", "Registration", "Customer")</h2>
+                    <h2>@Html.ActionLink("Login", "Login", "Customer")</h2>
+                </td>
+                <td>
+                    <h2> @Html.ActionLink("Contact us", "ContactUS", "Home")</h2>
+                </td>
+            </tr>
+            <tr style="width:100%">
+                <td width="50%"><img src="~/Images/homebanner.jpg" /></td>
+                <td width="50%"><img src="~/Images/homebanner.jpg" /></td>
+            </tr>
+            <tr style="width:100%">
+                <td width="100%">
+                    <h1>Welcome To Quick Cart:Your Online Shopping Partner</h1>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+</body>
+</html>

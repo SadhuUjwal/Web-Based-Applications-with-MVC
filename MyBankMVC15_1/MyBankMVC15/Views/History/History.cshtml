@@ -1,0 +1,48 @@
+﻿@model  IEnumerable<MyBankMVC15.Models.HistoryModel>
+
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>History</h2>
+
+<div>
+    <h4>HistoryModel</h4>
+    
+    <table border="1" height="200" width="400" align="center" bgcolor="pink">
+        <tr>
+            <th>
+                FromAccountNum
+            </th>
+            <th>
+                ToAccountNum
+            </th>
+            <th>
+                Date
+            </th>
+            <th>Ammount</th>
+            <th>CheckingAccountNumber</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FromAccountNum</td>
+                <td>
+                    @item.ToAccountNum
+                </td>
+                <td>
+                    @item.Date
+                </td>
+
+                <td>
+                    @item.Ammount
+                </td>
+                <td>@item.CheckingAccountNumber</td>
+             </tr>
+
+    }
+        </table>
+</div>
+

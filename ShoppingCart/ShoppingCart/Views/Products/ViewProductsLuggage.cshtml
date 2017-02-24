@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ShoppingCart.Models.Products>
+
+@{
+    ViewBag.Title = "ViewProductsLuggage";
+    Layout = "~/Views/Shared/navigationmenu.cshtml";
+}
+
+<h2>ViewProductsLuggage</h2>
+
+@using (Html.BeginForm())
+{
+    <table border="1">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/PImages/@item.ProductImage" />
+                </td>
+                <td>
+                    @item.ProductSDesc
+                </td>
+                <td>
+                    @item.ProductLDesc
+                </td>
+                <td>
+                    @item.price
+                </td>
+                <td>
+                    @Html.ActionLink("Add To Cart", "Addcart", "Products");
+                </td>
+            </tr>
+        }
+
+
+    </table>
+}

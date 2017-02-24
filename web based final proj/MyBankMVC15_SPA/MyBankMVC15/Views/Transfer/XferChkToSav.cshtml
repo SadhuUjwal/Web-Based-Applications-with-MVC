@@ -1,0 +1,29 @@
+﻿@model MyBankMVC15.Models.AccountModel
+
+@{
+    ViewBag.Title = "XferChkToSav";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>XferChkv</h2>
+
+<h2>XferChkToSav</h2>
+LoggedIn User : @ViewBag.Username<br />
+Account no:<br />
+Checking ammount:@ViewBag.ChkBall <br />
+Saving amount:@ViewBag.SavBall<br />
+@using (Html.BeginForm())
+{
+    <table border="0" style="width:500px">
+        <tr>
+
+            <td>Enter the ammount to be transfered</td>
+            <td>@Html.TextBoxFor(m => m.TransAmt)</td>
+
+        </tr>
+        <tr>
+            
+            <td><input type="submit" value="Transfer" name="btnTransfer" id="btnTransfer" /></td>
+        </tr>
+    </table>
+}

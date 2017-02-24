@@ -1,0 +1,26 @@
+﻿<h2>History</h2>
+<div ng-init="GetHistory()">
+    <div class="alert alert-danger" ng-show="Message">{{Message}}</div>
+    <table class="table" ng-hide="Message">
+        <tr class="row">
+            <th>
+                FromAccountNum
+            </th>
+            <th>
+                ToAccountNum
+            </th>
+            <th>
+                Date
+            </th>
+            <th>Ammount</th>
+            <th>CheckingAccountNumber</th>
+        </tr>
+        <tr class="row" ng-repeat="item in History">
+            <td>{{item.FromAccountNum}}</td>
+            <td>{{item.ToAccountNum}}</td>
+            <td>{{item.Date}}</td>
+            <td>{{item.Ammount}}</td>
+            <td>{{item.CheckingAccountNumber}}</td>
+        </tr>
+    </table>
+</div>
